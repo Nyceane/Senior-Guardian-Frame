@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="system_id"
+        android:title="@string/device_info_system_id"
+        android:selectable="false" />
+
+    <Preference
+        android:key="model_number"
+        android:title="@string/device_info_model_number"
+        android:selectable="false" />
+
+    <Preference
+        android:key="serial_number"
+        android:title="@string/device_info_serial_number"
+        android:selectable="false" />
+
+    <Preference
+        android:key="firmware_rev"
+        android:title="@string/device_info_firmware_rev"
+        android:selectable="false" />
+
+    <Preference
+        android:key="hardware_rev"
+        android:title="@string/device_info_hardware_rev"
+        android:selectable="false" />
+
+    <Preference
+        android:key="software_rev"
+        android:title="@string/device_info_software_rev"
+        android:selectable="false" />
+
+    <Preference
+        android:key="manufacturer_name"
+        android:title="@string/device_info_manufacturer_name"
+        android:selectable="false" />
+
+    <Preference
+        android:key="regulatory_cert"
+        android:title="@string/device_info_regulatory_cert"
+        android:selectable="false" />
+
+    <Preference
+        android:key="pnp_id"
+        android:title="@string/device_info_pnp_id"
+        android:selectable="false" />
+
+</PreferenceScreen>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="accelerometer"
+        android:title="@string/accelerometer"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="gyroscope"
+        android:title="@string/gyroscope"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="rotation_vector"
+        android:title="@string/rotation_vector"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="game_rotation_vector"
+        android:title="@string/game_rotation_vector"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="orientation"
+        android:title="@string/orientation"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="magnetometer"
+        android:title="@string/magnetometer"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="uncalibrated_magnetometer"
+        android:title="@string/uncalibrated_magnetometer"
+        android:selectable="false" />
+
+</PreferenceScreen>

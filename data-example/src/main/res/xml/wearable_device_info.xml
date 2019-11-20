@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:key="major_version"
+        android:title="@string/ar_device_info_major_version"
+        android:selectable="false" />
+
+    <Preference
+        android:key="minor_version"
+        android:title="@string/ar_device_info_minor_version"
+        android:selectable="false" />
+
+    <Preference
+        android:key="product_id"
+        android:title="@string/ar_device_info_product_id"
+        android:selectable="false" />
+
+    <Preference
+        android:key="product_variant"
+        android:title="@string/ar_device_info_variant"
+        android:selectable="false" />
+
+    <Preference
+        android:key="transmission_period"
+        android:title="@string/ar_device_info_transmission_period"
+        android:selectable="false" />
+
+    <Preference
+        android:key="max_payload"
+        android:title="@string/ar_device_info_max_payload"
+        android:selectable="false" />
+
+    <Preference
+        android:key="max_sensors"
+        android:title="@string/ar_device_info_max_sensors"
+        android:selectable="false" />
+
+    <Preference
+        android:key="device_status"
+        android:title="@string/ar_device_info_device_status"
+        android:selectable="false" />
+
+    <Preference
+        android:key="available_sensors"
+        android:title="@string/ar_device_info_available_sensors"
+        android:widgetLayout="@layout/pref_subsection"
+        app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+    <Preference
+        android:key="available_gestures"
+        android:title="@string/ar_device_info_available_gestures"
+        android:widgetLayout="@layout/pref_subsection"
+        app:fragment="com.bose.wearable.sample.AvailableGesturesFragment" />
+
+</PreferenceScreen>

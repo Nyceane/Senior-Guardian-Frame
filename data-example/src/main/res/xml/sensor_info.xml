@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="sensor_type"
+        android:title="@string/sensor_info_type"
+        android:selectable="false" />
+
+    <Preference
+        android:key="scaled_range"
+        android:title="@string/sensor_info_scaled_range"
+        android:selectable="false" />
+
+    <Preference
+        android:key="raw_range"
+        android:title="@string/sensor_info_raw_range"
+        android:selectable="false" />
+
+    <Preference
+        android:key="sample_length"
+        android:title="@string/sensor_info_sample_len"
+        android:selectable="false" />
+
+    <PreferenceCategory
+        android:title="@string/sample_periods" >
+
+        <CheckBoxPreference
+            android:key="sample_period_320"
+            android:title="@string/sample_period_320"
+            android:selectable="false" />
+
+        <CheckBoxPreference
+            android:key="sample_period_160"
+            android:title="@string/sample_period_160"
+            android:selectable="false" />
+
+        <CheckBoxPreference
+            android:key="sample_period_80"
+            android:title="@string/sample_period_80"
+            android:selectable="false" />
+
+        <CheckBoxPreference
+            android:key="sample_period_40"
+            android:title="@string/sample_period_40"
+            android:selectable="false" />
+
+        <CheckBoxPreference
+            android:key="sample_period_20"
+            android:title="@string/sample_period_20"
+            android:selectable="false" />
+
+        <CheckBoxPreference
+            android:key="sample_period_10"
+            android:title="@string/sample_period_10"
+            android:selectable="false" />
+
+        <CheckBoxPreference
+            android:key="sample_period_5"
+            android:title="@string/sample_period_5"
+            android:selectable="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

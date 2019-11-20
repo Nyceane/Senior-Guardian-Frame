@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/device_header" >
+
+        <Preference
+            android:key="device_info"
+            android:title="@string/device_info"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+        <Preference
+            android:key="device_properties"
+            android:title="@string/device_properties"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+        <Preference
+            android:key="wearable_device_info"
+            android:title="@string/wearable_device_info"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/wearable_sensor_header">
+
+        <Preference
+            android:key="wearable_sensor_info"
+            android:title="@string/wearable_sensor_info"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+        <Preference
+            android:key="wearable_sensor_config"
+            android:title="@string/wearable_sensor_config"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+        <Preference
+            android:key="wearable_sensor_data"
+            android:title="@string/wearable_sensor_data"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/wearable_gesture_header">
+
+        <Preference
+            android:key="wearable_gesture_config"
+            android:title="@string/wearable_gesture_config"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+        <Preference
+            android:key="wearable_gesture_data"
+            android:title="@string/wearable_gesture_data"
+            android:widgetLayout="@layout/pref_subsection"
+            app:fragment="com.bose.wearable.sample.AvailableSensorsFragment"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

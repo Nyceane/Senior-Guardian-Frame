@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="single_tap"
+        android:title="@string/single_tap"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="double_tap"
+        android:title="@string/double_tap"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="head_nod"
+        android:title="@string/head_nod"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="head_shake"
+        android:title="@string/head_shake"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="touch_and_hold"
+        android:title="@string/touch_and_hold"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="input_gesture"
+        android:title="@string/input_gesture"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="affirmative_gesture"
+        android:title="@string/affirmative_gesture"
+        android:selectable="false" />
+
+    <CheckBoxPreference
+        android:key="negative_gesture"
+        android:title="@string/negative_gesture"
+        android:selectable="false" />
+
+</PreferenceScreen>

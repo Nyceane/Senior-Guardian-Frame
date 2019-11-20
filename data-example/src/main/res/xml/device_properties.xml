@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="protocol_version"
+        android:title="@string/device_props_protocol_version"
+        android:selectable="false" />
+
+    <Preference
+        android:key="auth_supported"
+        android:title="@string/device_props_auth_supported"
+        android:selectable="false" />
+
+    <Preference
+        android:key="guid"
+        android:title="@string/device_props_guid"
+        android:selectable="false" />
+
+    <EditTextPreference
+        android:key="product_name"
+        android:title="@string/device_props_product_name"
+        android:dialogTitle="@string/name_dialog_title"
+        android:persistent="false" />
+
+    <Preference
+        android:key="battery_level"
+        android:title="@string/device_props_battery_level"
+        android:selectable="false" />
+
+    <ListPreference
+        android:key="cnc"
+        android:title="@string/device_props_cnc"
+        android:persistent="false"
+        android:dialogTitle="@string/cnc_dialog_title" />
+
+    <ListPreference
+        android:key="anr"
+        android:title="@string/device_props_anr"
+        android:persistent="false"
+        android:dialogTitle="@string/anr_dialog_title" />
+
+</PreferenceScreen>
