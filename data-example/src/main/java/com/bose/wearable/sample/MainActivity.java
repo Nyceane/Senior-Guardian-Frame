@@ -119,6 +119,8 @@ public class MainActivity extends AppCompatActivity implements PreferenceFragmen
 
         final NavController navController = Navigation.findNavController(this, R.id.my_nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController);
+        navigateTo(R.id.gestureConfigFragment);
+
     }
 
     @Override

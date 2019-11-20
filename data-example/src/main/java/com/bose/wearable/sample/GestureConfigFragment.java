@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -32,6 +33,8 @@ import java.util.List;
 public class GestureConfigFragment extends PreferenceFragmentCompat {
     private SessionViewModel mViewModel;
     private PreferenceGroup mGestureGroup;
+    int count  = 0;
+
     @NonNull
     private GestureConfiguration mGestureConf = GestureConfiguration.EMPTY;
 
@@ -122,6 +125,20 @@ public class GestureConfigFragment extends PreferenceFragmentCompat {
             }
 
             pref.setChecked(gestureConfiguration.gestureEnabled(gesture));
+        }
+
+
+        if(count == 0)
+        {
+            count++;
+            enableAll();
+            refreshData();
+        }
+        else
+        {
+
+            Navigation.findNavController(this.getActivity(), R.id.my_nav_host_fragment)
+                    .navigate(R.id.fallFragment);
         }
     }
 
