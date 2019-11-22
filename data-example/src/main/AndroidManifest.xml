@@ -3,6 +3,28 @@
           package="com.bose.wearable.sample"
           xmlns:android="http://schemas.android.com/apk/res/android"
           tools:ignore="GoogleAppIndexingWarning">
+    <!-- Using network location provider -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Using GPS location provider -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Using calling a phone -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Using WiFi state toggling -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- Using WebView -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Using speaker volume control -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- Using address book -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Using caller notification and identification -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Using bootstrap notification -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Using SMS receiving -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- Using SMS sending -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:name=".App"
