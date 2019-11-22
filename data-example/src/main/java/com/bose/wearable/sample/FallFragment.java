@@ -33,6 +33,7 @@ public class FallFragment extends Fragment {
     public static float normalThreshold = 2,
             fallenThreshold = 1;
     private int movecount = 0;
+    private int laycount = 0;
     TextToSpeech t1;
 
     @Nullable
@@ -101,10 +102,10 @@ public class FallFragment extends Fragment {
 
                 if (fallDetected)
                 {
-                    if(mAccel < 0.02)
+                    if(mAccel < 0.1)
                     {
-                        movecount++;
-                        if(movecount >= 10)
+                        laycount++;
+                        if(laycount >= 100 && movecount <50)
                         {
                             //8 seconds
                             smsHelp();
@@ -112,7 +113,16 @@ public class FallFragment extends Fragment {
                     }
                     else {
                         //reset
-                        fallDetected = false;
+                        movecount++;
+                        if(movecount >= 50)
+                        {
+                            movecount = 0;
+                            laycount = 0;
+                            fallDetected = false;
+                            t1.speak("It seems you are ok, you can double tap to make emergency phone call", TextToSpeech.QUEUE_FLUSH, null, "txtFall");
+
+                        }
+
                     }
                 }
 
@@ -142,6 +152,9 @@ public class FallFragment extends Fragment {
             Toast.makeText(this.getContext(), "Your contact has been notified",
                     Toast.LENGTH_LONG).show();
         }
+        movecount = 0;
+        laycount = 0;
+        fallDetected = false;
 
     }
 

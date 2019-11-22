@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +42,7 @@ public class HomeFragment extends Fragment {
     private static final String PREF_AUTO_CONNECT_ENABLED = "auto-connect-enabled";
 
     private SwitchCompat mAutoConnectSwitch;
+    private EditText mPhoneNumber;
 
     interface Listener {
         void onDeviceSelected(@NonNull String deviceAddress);
@@ -62,9 +64,11 @@ public class HomeFragment extends Fragment {
 
         final Button searchButton = view.findViewById(R.id.searchButton);
         searchButton.setOnClickListener(v -> onSearchClicked());
-
-        mAutoConnectSwitch = view.findViewById(R.id.autoConnectSwitch);
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+
+        mPhoneNumber = view.findViewById(R.id.txtPhoneNumber);
+        mPhoneNumber.setText(prefs.getString(this.getContext().getString(R.string.contact),""));
+        mAutoConnectSwitch = view.findViewById(R.id.autoConnectSwitch);
         mAutoConnectSwitch.setChecked(prefs.getBoolean(PREF_AUTO_CONNECT_ENABLED, true));
         mAutoConnectSwitch.setOnCheckedChangeListener((compoundButton, enabled) -> {
             prefs.edit()
@@ -108,6 +112,11 @@ public class HomeFragment extends Fragment {
         final Intent intent = DeviceConnectorActivity.newIntent(requireContext(), autoConnectTimeout,
             SensorIntent.EMPTY, GestureIntent.EMPTY);
 
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putString(this.getContext().getString(R.string.contact), mPhoneNumber.getText().toString());
+        editor.commit();
         startActivityForResult(intent, REQUEST_CODE_CONNECTOR);
     }
 
