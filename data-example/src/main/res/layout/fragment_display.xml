@@ -7,7 +7,24 @@
     android:layout_height="match_parent"
     android:layout_margin="32dp"
     >
-
+    <ImageView
+        android:id="@+id/iconPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="50dp"
+        android:src="@drawable/standing"
+        />
+    <ImageView
+        android:id="@+id/iconStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/iconPerson"
+        android:padding="50dp"
+        android:src="@drawable/check"
+        />
     <TextView
         android:id="@+id/txtScore"
         android:layout_width="wrap_content"
